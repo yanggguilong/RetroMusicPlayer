@@ -100,6 +100,10 @@ class MainActivity : AbsCastActivity() {
                     // Show Bottom Navigation Bar
                     setBottomNavVisibility(visible = true, animate = true)
                 }
+                R.id.jellyfinMainFragment -> {
+                    // Show Bottom Navigation Bar for Jellyfin
+                    setBottomNavVisibility(visible = true, animate = true)
+                }
                 R.id.playing_queue_fragment -> {
                     setBottomNavVisibility(visible = false, hideBottomSheet = true)
                 }

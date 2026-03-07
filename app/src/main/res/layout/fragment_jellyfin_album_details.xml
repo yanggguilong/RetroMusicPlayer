@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <code.name.monkey.retromusic.views.TopAppBarLayout
+        android:id="@+id/appBarLayout"
+        style="?appBarLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+    </code.name.monkey.retromusic.views.TopAppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/bottom_nav_mini_player_height">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/albumCover"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_album" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/albumName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="专辑名称"
+                        android:textAppearance="@style/TextViewHeadline6"
+                        android:layout_marginBottom="8dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/albumArtist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="艺术家"
+                        android:textAppearance="@style/TextViewSubtitle1"
+                        android:layout_marginBottom="4dp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/albumYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2024"
+                        android:textAppearance="@style/TextViewBody2" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/playAllButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="播放全部"
+                android:layout_margin="16dp"
+                style="@style/Widget.Material3.Button" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/dividerHorizontal" />
+
+            <code.name.monkey.retromusic.views.insets.InsetsRecyclerView
+                android:id="@+id/songsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

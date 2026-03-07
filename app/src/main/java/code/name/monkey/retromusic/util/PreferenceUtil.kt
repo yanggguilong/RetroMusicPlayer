@@ -855,6 +855,26 @@ object PreferenceUtil {
 
     val swipeDownToDismiss
         get() = sharedPreferences.getBoolean(SWIPE_DOWN_DISMISS, true)
+
+    var jellyfinServerUrl: String?
+        get() = sharedPreferences.getString("jellyfin_server_url", null)
+        set(value) = sharedPreferences.edit { putString("jellyfin_server_url", value) }
+
+    var jellyfinUsername: String?
+        get() = sharedPreferences.getString("jellyfin_username", null)
+        set(value) = sharedPreferences.edit { putString("jellyfin_username", value) }
+
+    var jellyfinPassword: String?
+        get() = sharedPreferences.getString("jellyfin_password", null)
+        set(value) = sharedPreferences.edit { putString("jellyfin_password", value) }
+
+    var jellyfinAccessToken: String?
+        get() = sharedPreferences.getString("jellyfin_access_token", null)
+        set(value) = sharedPreferences.edit { putString("jellyfin_access_token", value) }
+
+    var jellyfinUserId: String?
+        get() = sharedPreferences.getString("jellyfin_user_id", null)
+        set(value) = sharedPreferences.edit { putString("jellyfin_user_id", value) }
 }
 
 enum class CoverLyricsType {

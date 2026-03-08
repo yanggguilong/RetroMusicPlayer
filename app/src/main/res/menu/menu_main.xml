@@ -92,6 +92,11 @@
         android:title="@string/action_settings"
         app:showAsAction="never" />
     <item
+        android:id="@+id/action_jellyfin"
+        android:icon="@drawable/ic_cloud"
+        android:title="Jellyfin"
+        app:showAsAction="ifRoom" />
+    <item
         android:id="@+id/action_cast"
         android:title="@string/action_cast"
         app:actionProviderClass="androidx.mediarouter.app.MediaRouteActionProvider"

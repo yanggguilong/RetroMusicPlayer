@@ -9,16 +9,17 @@ coreSplashscreen = "1.0.1"
 customactivityoncrash = "2.4.0"
 fadingedgelayout = "1.0.0"
 google_featureDelivery_version = "2.1.0"
-gradle = "8.13.0"
+gradle = "8.7.3"
 dhaval2404_imagepicker_version = "2.1"
 chrisbanes_insetter_version = "0.6.1"
 jaudiotagger = "2.3.15"
 yslibrary_keyboardvisibilityevent_version = "3.0.0-RC3"
 koinAndroid = "3.5.6"
 kotlinGradlePlugin = "2.1.21"
+jellyfin_sdk = "1.5.0"
 
 kotlinxCoroutinesAndroid = "1.10.2"
-google_play_billing_version = "7.0.0"
+google_play_billing_version = "7.1.1"
 fast_scroll_libraryVersion = "1.2.0"
 lifecycle_version = "2.9.1"
 okhttp3_loggingInterceptor_version = "5.0.0-alpha.16"
@@ -76,6 +77,9 @@ glide-okhttp3-integration = { module = "com.github.bumptech.glide:okhttp3-integr
 #koin
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinAndroid" }
+
+#jellyfin
+jellyfin-sdk = { module = "org.jellyfin.sdk:jellyfin-android", version.ref = "jellyfin_sdk" }
 
 
 #material dialog

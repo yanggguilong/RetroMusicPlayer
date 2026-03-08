@@ -126,4 +126,52 @@
     <fragment
         android:id="@+id/lyrics_fragment"
         android:name="code.name.monkey.retromusic.fragments.lyrics.LyricsFragment" />
+
+    <fragment
+        android:id="@+id/jellyfinFragment"
+        android:name="code.name.monkey.retromusic.fragments.jellyfin.JellyfinFragment"
+        android:label="Jellyfin"
+        tools:layout="@layout/fragment_jellyfin">
+        <action
+            android:id="@+id/action_jellyfin_to_main"
+            app:destination="@id/jellyfinMainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/jellyfinMainFragment"
+        android:name="code.name.monkey.retromusic.fragments.jellyfin.JellyfinMainFragment"
+        android:label="Jellyfin Main"
+        tools:layout="@layout/fragment_jellyfin_main">
+        <action
+            android:id="@+id/action_jellyfin_main_to_jellyfinAlbumDetailsFragment"
+            app:destination="@id/jellyfinAlbumDetailsFragment">
+            <argument
+                android:name="album_id"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/jellyfinLibraryFragment"
+        android:name="code.name.monkey.retromusic.fragments.jellyfin.JellyfinLibraryFragment"
+        android:label="JellyfinLibrary"
+        tools:layout="@layout/fragment_jellyfin_library">
+        <action
+            android:id="@+id/action_jellyfin_library_to_album_details"
+            app:destination="@id/jellyfinAlbumDetailsFragment">
+            <argument
+                android:name="album_id"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/jellyfinAlbumDetailsFragment"
+        android:name="code.name.monkey.retromusic.fragments.jellyfin.JellyfinAlbumDetailsFragment"
+        android:label="JellyfinAlbumDetails"
+        tools:layout="@layout/fragment_jellyfin_album_details">
+        <argument
+            android:name="album_id"
+            app:argType="string" />
+    </fragment>
 </navigation>

@@ -145,6 +145,11 @@ class HomeFragment :
             setSharedAxisYTransitions()
         }
 
+        binding.jellyfinButton.setOnClickListener {
+            findNavController().navigate(R.id.jellyfinFragment)
+            setSharedAxisYTransitions()
+        }
+
         binding.userImage.setOnClickListener {
             findNavController().navigate(
                 R.id.user_info_fragment, null, null, FragmentNavigatorExtras(
@@ -288,6 +293,12 @@ class HomeFragment :
         when (item.itemId) {
             R.id.action_settings -> findNavController().navigate(
                 R.id.settings_fragment,
+                null,
+                navOptions
+            )
+
+            R.id.action_jellyfin -> findNavController().navigate(
+                R.id.jellyfinFragment,
                 null,
                 navOptions
             )
